@@ -85,7 +85,7 @@ func main() {
 	//Topics for publish to Wirenboard
 	topics := []mqttPayload{
 		{topic: topicPrefix + "/meta/name", payload: deviceLocation, retain: true},
-		{topic: topicPrefix + "/controls/temperature", payload: fmt.Sprintf("%f", w.Main.Temp), retain: true},
+		{topic: topicPrefix + "/controls/temperature", payload: fmt.Sprintf("%.2f", w.Main.Temp), retain: true},
 		{topic: topicPrefix + "/controls/temperature/meta/readonly", payload: "1", retain: true},
 		{topic: topicPrefix + "/controls/temperature/meta/type", payload: "temperature", retain: true},
 		{topic: topicPrefix + "/controls/humidity", payload: fmt.Sprintf("%d", w.Main.Humidity), retain: true},
