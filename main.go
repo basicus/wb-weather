@@ -80,7 +80,7 @@ func main() {
 	}
 
 	var topicPrefix string
-	topicPrefix = "devices/" + deviceName
+	topicPrefix = "/devices/" + deviceName
 
 	//Topics for publish to Wirenboard
 	topics := []mqttPayload{
